@@ -1,0 +1,92 @@
+{
+  "configuration": {
+    "classification": {
+      "stages": [
+        {
+          "name": "Base Tagging",
+          "steps": [
+            {
+              "type": "keywords",
+              "keywords": [
+                {
+                  "tag": "User",
+                  "text": "Customer"
+                },
+                {
+                  "tag": "User",
+                  "text": "Banker"
+                }
+              ]
+            },
+            {
+              "type": "d_regex",
+              "d_regex": [
+                {
+                  "tag": "Date",
+                  "pattern": "(\\d+/\\d+/\\d+)"
+                }
+              ]
+            },
+            {
+              "type": "d_regex",
+              "d_regex": [
+                {
+                  "tag": "Email",
+                  "pattern": "\\b[\\w.-]+?@\\w+?\\.\\w+?\\b"
+                }
+              ]
+            },
+            {
+              "type": "d_regex",
+              "d_regex": [
+                {
+                  "tag": "PhoneNumber",
+                  "pattern": "[0-9]{10}"
+                }
+              ]
+            },
+            {
+              "type": "chunking",
+              "chunk": [
+                {
+                  "tag": "REQ_ACTION",
+                  "pattern": "ACTION:{<VB.?>+(<TO>|<DT>|<PRP.?>|<IN>|<JJ>)*<NN.?|NNPS>+}"
+                },
+				{
+				  "tag": "REQ_ACTION",
+                  "pattern": "ACTION:{<VB.?>+(<TO>|<DT>|<PRP.?>|<IN>|<JJ>)*<PRP.?><NN.?|NNPS>+}"
+				},
+				{
+				  "tag": "DOMAIN_ACTION",
+                  "pattern": "ACTION:{(<VB.?>|<NN.?|NNPS>)+}"
+				},
+								{
+				  "tag": "DOMAIN_ACTION",
+                  "pattern": "ACTION:{<VB.?>+(<TO>|<DT>|<PRP.?>|<IN>|<JJ>)*<PRP.?><NN.?|NNPS>+}"
+				},
+				{
+				  "tag": "DE_ACTION",
+                  "pattern": "ACTION:{(<VB.?>|<NN.?|NNPS>)+}"
+				}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Domain Tagging",
+          "steps": [
+            {
+              "type": "d_regex",
+              "d_regex": [
+                {
+                  "tag": "Year",
+                  "pattern": "[0-9]{4}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

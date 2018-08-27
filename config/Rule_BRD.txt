@@ -1,0 +1,32 @@
+{
+  "configuration": {
+    "classification": {
+      "stages": {
+	  
+	  
+        
+          "steps": [
+		  {
+              "type": "chunking",
+              "chunk": [
+                {
+                  "tag": "REQ_ACTION",
+                  "pattern": "ACTION:{<VB.?>+(<TO>|<DT>|<PRP.?>|<IN>|<JJ>)*<NN.?|NNPS>+}"
+                },
+				{
+                  "tag": "DOMAIN_ACTION",
+                  "pattern": "ACTION:{<VB.?>+(<TO>|<DT>|<PRP.?>|<IN>|<JJ>)*<NN.?|NNPS>+}"
+                },
+				{
+				  "tag": "DE_ACTION",
+                  "pattern": "ACTION:{<VB.?>+(<TO>|<DT>|<PRP.?>|<IN>|<JJ>)*<NN.?|NNPS>+}"
+				}
+              ]
+            }
+          
+		  ]
+        
+      }
+    }
+  }
+}

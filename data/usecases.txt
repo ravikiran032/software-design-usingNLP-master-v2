@@ -1,0 +1,61 @@
+Function deals with Verification of PIN entered by Customer at ATM. It will be used for withdrawing money, checking balance  or depositing cheque. Input required for this are Account number, Name of customer 
+
+
+deposit cheque in customer name in customer account number	I want to increase my bank balance
+withdraw cash from an ATM	I don't have to wait in line at the Bank
+
+customer = View Account, Transfer Money,Withdraw cash, Apply loan, Cheque Services, Review transactions, Login, Transfer Funds, Pay Bills, Utility, Logout, Pay Registered Payment, Open Payment, Pay Registration Bill, Delete registration Bill, Transaction Details,Deposit Cheque
+banker = Verify PIN, Restock cash, Credit_check, Limit Cash, Administrator, fraudInvestigation
+
+
+use cases:
+Deposit Cheque = Deposit Cheque
+Withdraw cash =  Withdraw cash
+transfer money = Transfer Money
+pay my utility bills = Pay Bills, Withdraw cash, Pay Registration Bill, Pay Registered Payment
+apply for a loan =  Apply loan
+request for check books =  Cheque Services
+restock sufficient cash =  Restock cash, Limit cash
+limit the cash withdrawl = Limit cash
+review all transactions =  Review transactions
+review the credit history, apply for loans =  Credit_check
+operate locker = nil 
+
+Function deals with Verification of PIN entered by Customer at ATM. It will be used for withdrawing money, checking balance  or depositing cheque. Input required for this are Account number, Name of customer 
+
+
+Verification of PIN entered by Customer
+
+(verb) (preposition) (noun)
+
+customer verified pin
+
+(noun)  (verb)
+
+(PRE) (Noun)
+
+vb  prep noun
+
+noun verb
+
+
+
+ne_chunk
+chunking
+sentiment analysis
+wordnet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

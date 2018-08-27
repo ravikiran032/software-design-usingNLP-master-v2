@@ -1,0 +1,1 @@
+jupyter nbconvert "D:/machine learning/software-design-usingNLP-master v2/nWave_SoftwareDesign_working_onlybanking.ipynb" --to script
